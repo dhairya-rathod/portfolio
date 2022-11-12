@@ -1,0 +1,42 @@
+[
+  {
+    "id": "html",
+    "title": "HTML",
+    "logo": ""
+  },
+  {
+    "id": "css",
+    "title": "CSS",
+    "logo": ""
+  },
+  {
+    "id": "javascript",
+    "title": "JavaScript",
+    "logo": ""
+  },
+  {
+    "id": "typescript",
+    "title": "TypeScript",
+    "logo": ""
+  },
+  {
+    "id": "react",
+    "title": "ReactJs",
+    "logo": ""
+  },
+  {
+    "id": "nextJs",
+    "title": "NextJs",
+    "logo": ""
+  },
+  {
+    "id": "tailwind",
+    "title": "Tailwind",
+    "logo": ""
+  },
+  {
+    "id": "git",
+    "title": "Git",
+    "logo": ""
+  }
+]
