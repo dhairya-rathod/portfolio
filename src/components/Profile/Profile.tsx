@@ -7,7 +7,10 @@ import profileImg from "../../../public/images/profile.svg";
 
 const Profile = () => {
   return (
-    <section className="flex flex-col justify-center items-center pt-28 pb-60">
+    <section
+      id="profile"
+      className="flex flex-col justify-center items-center pt-28 pb-60"
+    >
       <Image src={profileImg} width={300} alt="profile" />
       <h2 className="mt-4 font-medium text-7xl text-[#343434]">
         Dhairya Rathod

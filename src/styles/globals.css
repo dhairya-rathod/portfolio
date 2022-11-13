@@ -30,6 +30,7 @@ body #__next main {
 /* CSS reset */
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body,
