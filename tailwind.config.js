@@ -1,6 +1,10 @@
 module.exports = {
   mode: "jit",
-  purge: ["./src/pages/**/*.{js, jsx}", "./src/components/**/*.{js, jsx}"],
+  purge: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
@@ -41,7 +45,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ["Calibre", "sans-serif"],
+      sans: ["Poppins", "sans-serif"],
       mono: ['"JetBrains Mono"', "monospace"],
     },
     spacing: {
