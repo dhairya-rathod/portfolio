@@ -1,3 +1,5 @@
+import { IconsEnum } from "./types";
+
 export const METADATA = {
   title: "Dhairya Rathod | Software Engineer",
   description: "Dhairya Rathod is a Full Stack Developer from India.",
@@ -36,22 +38,27 @@ export const TYPED_STRINGS = [
 
 export const SOCIAL_LINKS = [
   {
+    key: IconsEnum.MAIL,
     name: "mail",
     url: "mailto: dhairya.rathod.us@gmail.com",
   },
   {
+    key: IconsEnum.LINKEDIN,
     name: "linkedin",
     url: "https://www.linkedin.com/in/dhairya-rathod/",
   },
   {
+    key: IconsEnum.GITHUB,
     name: "github",
     url: "https://github.com/dhairya-rathod",
   },
   {
+    key: IconsEnum.INSTAGRAM,
     name: "instagram",
     url: "https://www.instagram.com/dhairya0o7/",
   },
   {
+    key: IconsEnum.TWITTER,
     name: "twitter",
     url: "https://twitter.com/dhairya0o7",
   },

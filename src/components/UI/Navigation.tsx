@@ -29,7 +29,7 @@ const NavLink = ({
 
 const Navigation = () => {
   return (
-    <nav className="fixed bottom-6 right-0 left-0 z-10 mx-auto flex w-60 justify-evenly items-center rounded-full p-2 text-black shadow-lg bg-white">
+    <nav className="fixed bottom-6 right-0 left-0 z-10 mx-auto flex w-52 justify-evenly items-center rounded-full p-2 text-black shadow-lg bg-white">
       <NavLink name="Home" link="/" Icon={AiOutlineHome} />
       <NavLink name="Work" link="/" Icon={BsBriefcase} />
     </nav>

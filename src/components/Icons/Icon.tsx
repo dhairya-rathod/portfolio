@@ -5,7 +5,7 @@ import {
   IconTwitter,
   IconGithub,
   IconExternal,
-} from "@/components/Icons/Index";
+} from "@/components/Icons";
 import { IconsEnum } from "src/types";
 
 const Icon = ({ name }: { name: IconsEnum }) => {

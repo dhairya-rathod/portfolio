@@ -1,3 +1,4 @@
+import { Intro } from "@/components/Home";
 import { Meta } from "@/components/Seo";
 import { Navigation } from "@/components/UI";
 
@@ -7,7 +8,7 @@ export default function Home() {
       <Navigation />
 
       <main className="flex flex-col h-full">
-        <div>Home page</div>
+        <Intro />
       </main>
     </Meta>
   );
