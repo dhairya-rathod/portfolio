@@ -10,7 +10,7 @@ const Meta = ({ children }: { children: React.ReactNode }) => {
         <meta name="description" content={METADATA.description} />
         <meta
           name="keywords"
-          content="Dhairya Rathod, Full Stack Developer, Software Developer, Software Engineer,Frontend Engineer, Frontend Developer, Portfolio, Devfolio, Web Development, Web Developer"
+          content="Dhairya Rathod, Full Stack Developer, Software Developer, Software Engineer, Frontend Engineer, Frontend Developer, Portfolio, Devfolio, Web Development, Web Developer"
         />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -27,11 +27,10 @@ const Meta = ({ children }: { children: React.ReactNode }) => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={METADATA.title} />
         <meta property="og:description" content={METADATA.description} />
-        {/* TODO: change preview */}
-        {/* <meta
+        <meta
           property="og:image"
-          content="https://res.cloudinary.com/dywdhyojt/image/upload/v1651299924/preview.png"
-        /> */}
+          content="https://res.cloudinary.com/ddn7ibfyc/image/upload/v1669129363/portfolio/portfolio-preview_gvpsjk.png"
+        />
         <meta property="og:url" content={METADATA.siteUrl} />
         <meta property="og:site_name" content={METADATA.title} />
 
@@ -42,11 +41,10 @@ const Meta = ({ children }: { children: React.ReactNode }) => {
         <meta property="twitter:site" content={METADATA.twitterHandle} />
         <meta name="twitter:creator" content={METADATA.twitterHandle} />
         <meta property="twitter:url" content={METADATA.siteUrl} />
-        {/* TODO: change preview */}
-        {/* <meta
+        <meta
           property="twitter:image"
-          content="https://res.cloudinary.com/dywdhyojt/image/upload/v1651299924/preview.png"
-        /> */}
+          content="https://res.cloudinary.com/ddn7ibfyc/image/upload/v1669129363/portfolio/portfolio-preview_gvpsjk.png"
+        />
 
         <link
           rel="apple-touch-icon"

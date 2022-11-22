@@ -1,5 +1,9 @@
+import Image from "next/image";
+
 import { Social } from "@/components/Social";
 import { MENULINKS } from "src/constants";
+
+import programming from "../../../public/images/home-programming.svg";
 
 import styles from "./Intro.module.scss";
 
@@ -27,6 +31,9 @@ const Intro = () => {
         <div className="seq">
           <Social />
         </div>
+      </div>
+      <div className="absolute invisible w-4/12 bottom--1/2 lg:visible lg:right-12 2xl:right-16">
+        <Image src={programming} alt="homepage image" />
       </div>
     </section>
   );
