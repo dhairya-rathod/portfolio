@@ -1,3 +1,5 @@
+import { IconsEnum } from "src/types";
+
 import {
   IconMail,
   IconLinkedin,
@@ -5,8 +7,7 @@ import {
   IconTwitter,
   IconGithub,
   IconExternal,
-} from "@/components/Icons";
-import { IconsEnum } from "src/types";
+} from "./index";
 
 const Icon = ({ name }: { name: IconsEnum }) => {
   switch (name) {
