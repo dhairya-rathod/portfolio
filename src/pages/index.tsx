@@ -1,5 +1,6 @@
-import { Intro } from "@/components/Home";
+import { About, Intro } from "@/components/Home";
 import { Meta } from "@/components/Seo";
+import { Skills } from "@/components/Skills";
 import { Navigation } from "@/components/UI";
 
 export default function Home() {
@@ -7,8 +8,10 @@ export default function Home() {
     <Meta>
       <Navigation />
 
-      <main className="flex flex-col h-full">
+      <main className="flex flex-col h-full min-h-screen">
         <Intro />
+        <About />
+        <Skills />
       </main>
     </Meta>
   );
