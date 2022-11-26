@@ -3,6 +3,9 @@ import { type IconType } from "react-icons";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsBriefcase } from "react-icons/bs";
 
+import { SoundBar } from "@/components/UI";
+import { MENULINKS } from "src/constants";
+
 // import audio from "../../../public/audio/audio.mp3";
 
 const NavLink = ({
@@ -29,9 +32,12 @@ const NavLink = ({
 
 const Navigation = () => {
   return (
-    <nav className="fixed bottom-6 right-0 left-0 z-10 mx-auto flex w-52 justify-evenly items-center rounded-full p-2 text-black shadow-lg bg-white">
-      <NavLink name="Home" link="/" Icon={AiOutlineHome} />
+    <nav className="fixed bottom-6 right-0 left-0 z-10 mx-auto flex w-56 justify-evenly items-center rounded-full p-2 text-black shadow-lg bg-white">
+      <NavLink name="Home" link={`#${MENULINKS[0].ref}`} Icon={AiOutlineHome} />
       <NavLink name="Work" link="/" Icon={BsBriefcase} />
+      <div className="relative w-[19px] h-[18px]">
+        <SoundBar />
+      </div>
     </nav>
   );
 };

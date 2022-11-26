@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { Social } from "@/components/Social";
+import { Button } from "@/components/UI";
 import { MENULINKS } from "src/constants";
 
 import programming from "../../../public/images/home-programming.svg";
@@ -11,7 +12,7 @@ const Intro = () => {
   return (
     <section
       id={MENULINKS[0].ref}
-      className="w-full flex md:items-center py-8 2xl:container mx-auto xl:px-20 md:px-12 px-4 min-h-screen relative mb-24"
+      className="w-full flex md:items-center py-8 2xl:container mx-auto xl:px-20 md:px-12 px-4 min-h-screen relative"
     >
       <div className="flex flex-col pt-40 md:pt-0 select-none">
         <h5
@@ -30,6 +31,11 @@ const Intro = () => {
         </p>
         <div className="seq">
           <Social />
+        </div>
+        <div className="seq pt-4">
+          <Button href={`#${MENULINKS[4].ref}`} classes="link" type="primary">
+            Let&apos;s Talk
+          </Button>
         </div>
       </div>
       <div className="absolute invisible w-4/12 bottom--1/2 lg:visible lg:right-12 2xl:right-16">

@@ -71,13 +71,9 @@ export const SKILLS = {
     "javascript",
     "typescript",
     "sass",
-    "cpp",
-    "java",
     "python",
     "firebase",
-    "moralis",
     "stripe",
-    // "figma"
   ],
   librariesAndFrameworks: [
     "react",
@@ -85,11 +81,11 @@ export const SKILLS = {
     "nextjs",
     "tailwindcss",
     "styledcomponents",
-    "antdesign",
+    "mui",
     "chakra-ui",
   ],
   databases: ["mysql", "mongodb"],
-  other: ["nodejs", "git", "sanity-io"],
+  other: ["nodejs", "git"],
 };
 
 export const PROJECTS = [
