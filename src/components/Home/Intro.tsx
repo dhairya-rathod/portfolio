@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { Social } from "@/components/Social";
-import { Button } from "@/components/UI";
+import { ConnectButton, ResumeButton } from "@/components/UI";
 import { MENULINKS } from "src/constants";
 
 import programming from "../../../public/images/home-programming.svg";
@@ -40,10 +40,9 @@ const Intro = () => {
         <div className="">
           <Social />
         </div>
-        <div className=" pt-4">
-          <Button href={`#${MENULINKS[4].ref}`} classes="link" type="primary">
-            Let&apos;s Talk
-          </Button>
+        <div className="flex gap-6 pt-4">
+          <ResumeButton />
+          <ConnectButton />
         </div>
       </div>
       {/* <div className="absolute invisible w-4/12 bottom--1/2 lg:visible lg:right-12 2xl:right-16"> */}
