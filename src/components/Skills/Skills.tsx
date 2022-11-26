@@ -6,10 +6,10 @@ import { MENULINKS, SKILLS } from "../../constants";
 const Skills = () => {
   return (
     <section
-      className="w-full py-12 relative select-none"
+      className="w-full py-12 relative select-none min-h-screen flex h-full items-center"
       id={MENULINKS[1].ref}
     >
-      <div className="section-container flex flex-col justify-center">
+      <div className="section-container w-full flex flex-col justify-center">
         <div className="flex flex-col skills-wrapper">
           <div className="flex flex-col">
             <h1 className="text-5xl mt-2 font-bold text-gradient w-fit ">
