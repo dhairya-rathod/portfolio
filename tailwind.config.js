@@ -800,6 +800,23 @@ module.exports = {
       50: "50",
       "-1": "-1",
     },
+    extend: {
+      keyframes: {
+        wave: {
+          "0%": { transform: "rotate(0.0deg)", transformOrigin: "bottom" },
+          "15%": { transform: "rotate(14.0deg)", transformOrigin: "bottom" },
+          "30%": { transform: "rotate(-8.0deg)", transformOrigin: "bottom" },
+          "40%": { transform: "rotate(14.0deg)", transformOrigin: "bottom" },
+          "50%": { transform: "rotate(-4.0deg)", transformOrigin: "bottom" },
+          "60%": { transform: "rotate(10.0deg)", transformOrigin: "bottom" },
+          "70%": { transform: "rotate(0.0deg)", transformOrigin: "bottom" },
+          "100%": { transform: "rotate(0.0deg)", transformOrigin: "bottom" },
+        },
+      },
+      animation: {
+        wave: "wave 1.5s infinite",
+      },
+    },
   },
   variantOrder: [
     "first",

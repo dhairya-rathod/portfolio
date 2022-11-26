@@ -1,7 +1,7 @@
 import { About, Intro } from "@/components/Home";
 import { Meta } from "@/components/Seo";
 import { Skills } from "@/components/Skills";
-import { Navigation } from "@/components/UI";
+import { Footer, Navigation } from "@/components/UI";
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
         <About />
         <Skills />
       </main>
+      <Footer />
     </Meta>
   );
 }

@@ -1,9 +1,9 @@
-import { IconsEnum } from "./types";
+import { IconsEnum } from "src/types";
 
 export const METADATA = {
   title: "Dhairya Rathod | Software Engineer",
   description: "Dhairya Rathod is a Full Stack Developer from India.",
-  siteUrl: "",
+  siteUrl: "https://dhairya-rathod.netlify.app/",
   twitterHandle: "@dhairya0o7",
 };
 

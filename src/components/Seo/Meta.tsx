@@ -7,6 +7,7 @@ const Meta = ({ children }: { children: React.ReactNode }) => {
     <>
       <Head>
         <title>{METADATA.title}</title>
+        <meta name="title" content={METADATA.title} />
         <meta name="description" content={METADATA.description} />
         <meta
           name="keywords"

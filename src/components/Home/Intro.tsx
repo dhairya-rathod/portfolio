@@ -16,23 +16,31 @@ const Intro = () => {
     >
       <div className="flex flex-col pt-40 md:pt-0 select-none">
         <h5
-          className={`${styles.intro} font-mono font-medium text-indigo-light seq`}
+          className={`${styles.intro} font-mono font-medium text-indigo-light`}
         >
-          Hi, my name is
+          Hi
+          <span
+            role="img"
+            aria-label="emoji"
+            className="relative bottom-[3px] inline-block animate-wave"
+          >
+            👋🏼
+          </span>
+          , my name is
         </h5>
         <h1 className={`${styles.heroName} text-white text-5xl font-semibold`}>
-          <span className={`relative ${styles.emphasize} seq`}>Dhairya</span>
-          <span className="seq"> Rathod</span>
+          <span className={`relative ${styles.emphasize} `}>Dhairya</span>
+          <span className=""> Rathod</span>
         </h1>
         <p>
-          <span className="seq text-3xl text-gray-light-3 font-mono leading-relaxed">
+          <span className=" text-3xl text-gray-light-3 font-mono leading-relaxed">
             A Full Stack Developer
           </span>
         </p>
-        <div className="seq">
+        <div className="">
           <Social />
         </div>
-        <div className="seq pt-4">
+        <div className=" pt-4">
           <Button href={`#${MENULINKS[4].ref}`} classes="link" type="primary">
             Let&apos;s Talk
           </Button>

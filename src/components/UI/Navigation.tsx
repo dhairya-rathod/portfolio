@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { type IconType } from "react-icons";
 import { AiOutlineHome } from "react-icons/ai";
-import { BsBriefcase } from "react-icons/bs";
+// import { BsBriefcase } from "react-icons/bs";
+import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
 
 import { SoundBar } from "@/components/UI";
 import { MENULINKS } from "src/constants";
@@ -33,8 +34,17 @@ const NavLink = ({
 const Navigation = () => {
   return (
     <nav className="fixed bottom-6 right-0 left-0 z-10 mx-auto flex w-56 justify-evenly items-center rounded-full p-2 text-black shadow-lg bg-white">
-      <NavLink name="Home" link={`#${MENULINKS[0].ref}`} Icon={AiOutlineHome} />
-      <NavLink name="Work" link="/" Icon={BsBriefcase} />
+      <NavLink
+        name={MENULINKS[0].name}
+        link={`#${MENULINKS[0].ref}`}
+        Icon={AiOutlineHome}
+      />
+      {/* <NavLink name="Work" link="/" Icon={BsBriefcase} /> */}
+      <NavLink
+        name={MENULINKS[1].name}
+        link={`#${MENULINKS[1].ref}`}
+        Icon={HiOutlineWrenchScrewdriver}
+      />
       <div className="relative w-[19px] h-[18px]">
         <SoundBar />
       </div>
