@@ -31,9 +31,8 @@ export const MENULINKS = [
 ];
 
 export const TYPED_STRINGS = [
-  "A pragmatic Full Stack Developer",
+  "A Full Stack Developer",
   "I build things for the web",
-  "I create aesthetic and modern apps",
 ];
 
 export const SOCIAL_LINKS = [
@@ -114,5 +113,7 @@ export const WORK = [
   //   url: "https://spacenos.com/",
   // },
 ];
+
+export const RESUME_LINK = process.env.NEXT_PUBLIC_RESUME_LINK;
 
 export const GTAG = "";

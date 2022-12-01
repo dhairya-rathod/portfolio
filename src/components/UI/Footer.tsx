@@ -2,9 +2,7 @@
 import Image from "next/image";
 
 import { Social } from "@/components/Social";
-import { Button } from "@/components/UI";
-
-import { MENULINKS } from "../../constants";
+import { ConnectButton } from "@/components/UI";
 
 const Footer = () => {
   return (
@@ -26,13 +24,7 @@ const Footer = () => {
             <Social />
           </div>
           <div className=" pt-4 text-center">
-            <Button
-              href={`#${MENULINKS[4].ref}`}
-              classes="link"
-              type="secondary"
-            >
-              Let&apos;s Talk
-            </Button>
+            <ConnectButton type="secondary" />
           </div>
           <p className="text-center text-sm sm:text-base font-bold tracking-wide mt-8">
             Developed with{" "}

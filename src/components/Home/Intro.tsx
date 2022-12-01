@@ -1,14 +1,34 @@
 import Image from "next/image";
+import { useEffect, useRef } from "react";
+import Typed from "typed.js";
 
 import { Social } from "@/components/Social";
-import { Button } from "@/components/UI";
-import { MENULINKS } from "src/constants";
+import { ConnectButton, ResumeButton } from "@/components/UI";
+import { MENULINKS, TYPED_STRINGS } from "src/constants";
 
 import programming from "../../../public/images/home-programming.svg";
 
 import styles from "./Intro.module.scss";
 
 const Intro = () => {
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  const typedEl = useRef<HTMLSpanElement>(null!);
+
+  useEffect(() => {
+    const options = {
+      strings: TYPED_STRINGS,
+      typeSpeed: 50,
+      startDelay: 1500,
+      backSpeed: 50,
+      backDelay: 8000,
+      loop: true,
+    };
+
+    const typed = new Typed(typedEl.current, options);
+
+    return () => typed.destroy();
+  }, [typedEl]);
+
   return (
     <section
       id={MENULINKS[0].ref}
@@ -33,17 +53,17 @@ const Intro = () => {
           <span className=""> Rathod</span>
         </h1>
         <p>
-          <span className=" text-3xl text-gray-light-3 font-mono leading-relaxed">
-            A Full Stack Developer
-          </span>
+          <span
+            className="text-3xl text-gray-light-3 font-mono leading-relaxed"
+            ref={typedEl}
+          ></span>
         </p>
         <div className="">
           <Social />
         </div>
-        <div className=" pt-4">
-          <Button href={`#${MENULINKS[4].ref}`} classes="link" type="primary">
-            Let&apos;s Talk
-          </Button>
+        <div className="flex gap-6 pt-4">
+          <ResumeButton />
+          <ConnectButton />
         </div>
       </div>
       {/* <div className="absolute invisible w-4/12 bottom--1/2 lg:visible lg:right-12 2xl:right-16"> */}

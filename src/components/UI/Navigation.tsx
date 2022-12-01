@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { type IconType } from "react-icons";
 import { AiOutlineHome } from "react-icons/ai";
 // import { BsBriefcase } from "react-icons/bs";
@@ -19,7 +18,7 @@ const NavLink = ({
   Icon: IconType;
 }) => {
   return (
-    <Link
+    <a
       href={link}
       className="flex justify-center items-center hover:text-indigo-dark"
     >
@@ -27,13 +26,13 @@ const NavLink = ({
         <Icon />
       </p>
       <p className="ml-1 text-xs font-bold opacity-70">{name}</p>
-    </Link>
+    </a>
   );
 };
 
 const Navigation = () => {
   return (
-    <nav className="fixed bottom-6 right-0 left-0 z-10 mx-auto flex w-56 justify-evenly items-center rounded-full p-2 text-black shadow-lg bg-white">
+    <nav className="fixed bottom-6 right-0 left-0 z-10 mx-auto flex w-56 justify-evenly items-center rounded-full py-4 px-2 md:p-2 text-black shadow-lg bg-white">
       <NavLink
         name={MENULINKS[0].name}
         link={`#${MENULINKS[0].ref}`}
