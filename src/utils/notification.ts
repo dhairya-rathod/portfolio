@@ -7,17 +7,17 @@ const notificationStyles = {
   },
 };
 
-export const warning = (message: string) =>
+export const warningNotification = (message: string) =>
   toast.warning(message, {
     ...notificationStyles,
   });
 
-export const error = (message: string) =>
+export const errorNotification = (message: string) =>
   toast.error(message, {
     ...notificationStyles,
   });
 
-export const success = (message: string) =>
+export const successNotification = (message: string) =>
   toast.success(message, {
     ...notificationStyles,
   });

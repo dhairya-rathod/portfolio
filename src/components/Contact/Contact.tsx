@@ -2,7 +2,11 @@
 import Filter from "bad-words";
 import { ChangeEvent, SyntheticEvent, useState } from "react";
 
-import { warning } from "@/utils/index";
+import {
+  successNotification,
+  warningNotification,
+  errorNotification,
+} from "@/utils/index";
 import { MENULINKS } from "src/constants";
 import { ContactFormData } from "src/types/form";
 
@@ -23,8 +27,6 @@ const Contact = () => {
   }: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
     const { name, value } = target;
 
-    // value.length === 0 ? setIsSending(false) : setIsSending(true);
-
     setFormData((prevVal: ContactFormData) => {
       if (
         value.trim() !== prevVal[name as keyof ContactFormData] &&
@@ -42,24 +44,46 @@ const Contact = () => {
     setFormData(initialState);
   };
 
-  const handleSubmit = (e: SyntheticEvent) => {
+  const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
-    // const { name, email, message } = {
-    //   name: formData.name,
-    //   email: formData.email,
-    //   message: formData.message,
-    // };
+    const { name, email, message } = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    };
 
-    // if (name === "" || email === "" || message === "") {
-    //   warning("Please fill the required fields");
-    //   return;
-    // }
+    if (name === "" || email === "" || message === "") {
+      warningNotification("Please fill the required fields");
+      return;
+    }
 
-    // setIsSending(true);
-
-    warning("This feature is under development 🚧");
+    setIsSending(true);
+    try {
+      const response = await fetch("/api/send-message", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          token: process.env.NEXT_PUBLIC_TOKEN as string,
+        },
+        body: JSON.stringify({
+          name,
+          message,
+          email,
+        }),
+      });
+      const data = await response.json();
+      if (data.data) {
+        successNotification("Message sent successfully");
+      } else {
+        errorNotification("Error sending your message");
+      }
+    } catch (err) {
+      errorNotification("Error sending your message");
+    }
     emptyForm();
+    setIsSending(false);
   };
 
   return (
