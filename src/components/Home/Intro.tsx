@@ -32,9 +32,9 @@ const Intro = () => {
   return (
     <section
       id={MENULINKS[0].ref}
-      className="w-full flex flex-col lg:flex-row justify-between md:justify-around lg:justify-between md:items-center py-8 2xl:container mx-auto xl:px-20 md:px-12 px-4 min-h-screen relative"
+      className="w-full flex flex-col lg:flex-row justify-around lg:justify-between md:items-center py-8 2xl:container mx-auto xl:px-20 md:px-12 px-4 min-h-screen relative"
     >
-      <div className="w-full lg:w-1/2 flex flex-col pt-40 md:pt-0 select-none">
+      <div className="w-full lg:w-1/2 flex flex-col md:pt-0 select-none">
         <h5
           className={`${styles.intro} font-mono font-medium text-indigo-light`}
         >
