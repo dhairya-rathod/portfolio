@@ -1,3 +1,4 @@
+import { Contact } from "@/components/Contact";
 import { About, Intro } from "@/components/Home";
 import { Meta } from "@/components/Seo";
 import { Skills } from "@/components/Skills";
@@ -12,6 +13,7 @@ export default function Home() {
         <Intro />
         <About />
         <Skills />
+        <Contact />
       </main>
       <Footer />
     </Meta>
