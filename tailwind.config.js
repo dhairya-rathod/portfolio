@@ -45,7 +45,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ["'Poppins'", "sans-serif"],
+      sans: ['"Poppins"', "sans-serif"],
       mono: ['"JetBrains Mono"', "monospace"],
     },
     spacing: {
