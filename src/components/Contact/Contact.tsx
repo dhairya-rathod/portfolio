@@ -95,7 +95,7 @@ const Contact = () => {
         <div className="flex flex-col work-wrapper">
           <div className="flex flex-col">
             <h1 className="text-6xl mt-2 font-medium text-gradient w-fit seq">
-              Contact
+              Contact me
             </h1>
           </div>
         </div>
