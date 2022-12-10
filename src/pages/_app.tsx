@@ -1,13 +1,16 @@
 import type { AppProps } from "next/app";
 import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 import ErrorBoundary from "@/components/ErrorBoundary";
+import { GoogleAnalytics } from "@/components/Scripts";
+
+import "react-toastify/dist/ReactToastify.css";
 import "@/styles/globals.scss";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <GoogleAnalytics />
       <ErrorBoundary>
         <Component {...pageProps} />
       </ErrorBoundary>
