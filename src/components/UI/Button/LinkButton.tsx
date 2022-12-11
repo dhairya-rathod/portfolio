@@ -1,6 +1,6 @@
 import styles from "./Button.module.scss";
 
-const Button = ({
+const LinkButton = ({
   href,
   onClick,
   children,
@@ -36,4 +36,4 @@ const Button = ({
   );
 };
 
-export default Button;
+export default LinkButton;
