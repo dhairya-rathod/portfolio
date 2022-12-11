@@ -27,9 +27,10 @@ const Login = ({ csrfToken }: { csrfToken: string }) => {
       redirect: false,
       email: values.email,
       password: values.password,
-      callbackUrl: "http://localhost:3000/admin/dashboard",
+      callbackUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/admin/dashboard`,
     });
-    if (res?.url) router.push("http://localhost:3000/admin/dashboard");
+    if (res?.url)
+      router.push(`${process.env.NEXT_PUBLIC_BASE_URL}/admin/dashboard`);
   };
 
   return (
