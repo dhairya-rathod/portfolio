@@ -11,6 +11,7 @@ interface FormData {
 
 const Login = ({ csrfToken }: { csrfToken: string }) => {
   const router = useRouter();
+
   const {
     handleSubmit,
     control,

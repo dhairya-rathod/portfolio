@@ -1,7 +1,15 @@
-import React from "react";
+import React, { ReactElement } from "react";
 
-const dashboard = () => {
-  return <div>dashboard</div>;
+import AdminLayout from "@/components/AdminLayout";
+
+import { NextPageWithLayout } from "../_app";
+
+const Dashboard: NextPageWithLayout = () => {
+  return <div className="h-full">Dashboard</div>;
 };
 
-export default dashboard;
+Dashboard.getLayout = function (page: ReactElement) {
+  return <AdminLayout>{page}</AdminLayout>;
+};
+
+export default Dashboard;
