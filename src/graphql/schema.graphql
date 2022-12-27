@@ -2,6 +2,11 @@
 ### Do not make changes to this file directly
 
 
+type Edge {
+  cursor: String
+  node: Message
+}
+
 type Message {
   created_at: String
   email: String
@@ -10,9 +15,19 @@ type Message {
   name: String
 }
 
+type PageInfo {
+  endCursor: String
+  hasNextPage: Boolean
+}
+
 type Query {
-  messages: [Message]!
+  messages(after: String, first: Int): Response
   users: [User]!
+}
+
+type Response {
+  edges: [Edge]
+  pageInfo: PageInfo
 }
 
 enum Role {
