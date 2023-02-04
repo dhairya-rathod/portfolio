@@ -206,3 +206,24 @@
     }
   }
 }
+
+.btnDanger {
+  border: 2px solid #ef5350 !important;
+  &:hover,
+  &:active {
+    box-shadow: 0 0 1rem #ef5350;
+  }
+}
+
+.btnSuccess {
+  border: 2px solid theme("colors.green");
+  &:hover,
+  &:active {
+    box-shadow: 0 0 1rem theme("colors.green");
+  }
+}
+
+.textBase {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
