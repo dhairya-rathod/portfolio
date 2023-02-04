@@ -113,3 +113,5 @@ export const WORK = [
 export const RESUME_LINK = process.env.NEXT_PUBLIC_RESUME_LINK;
 
 export const GTAG = process.env.NEXT_PUBLIC_GTAG;
+
+export const YT_LINK = "https://youtu.be/dQw4w9WgXcQ?t=43";

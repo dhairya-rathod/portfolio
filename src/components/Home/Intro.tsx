@@ -3,8 +3,8 @@ import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 
 import { Social } from "@/components/Social";
-import { ConnectButton, ResumeButton } from "@/components/UI";
-import { MENULINKS, TYPED_STRINGS } from "src/constants";
+import { ConnectButton, PrimaryButton, ResumeButton } from "@/components/UI";
+import { MENULINKS, TYPED_STRINGS, YT_LINK } from "src/constants";
 
 import programming from "../../../public/images/home-programming.svg";
 
@@ -13,6 +13,12 @@ import styles from "./Intro.module.scss";
 const Intro = () => {
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const typedEl = useRef<HTMLSpanElement>(null!);
+
+  const redirectToYT = () => {
+    if (window !== undefined) {
+      window.open(YT_LINK, "_blank")?.focus();
+    }
+  };
 
   useEffect(() => {
     const options = {
@@ -61,9 +67,14 @@ const Intro = () => {
         <div className="">
           <Social />
         </div>
-        <div className="flex gap-6 pt-4">
+        <div className="flex gap-6 pt-4 flex-wrap">
           <ResumeButton />
           <ConnectButton />
+          <PrimaryButton
+            label="Don't Click Here"
+            onClick={redirectToYT}
+            textVariant="base"
+          />
         </div>
       </div>
       {/* <div className="absolute invisible w-4/12 bottom--1/2 lg:visible lg:right-12 2xl:right-16"> */}

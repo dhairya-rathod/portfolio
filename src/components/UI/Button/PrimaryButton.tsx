@@ -5,6 +5,8 @@ interface PrimaryButtonProps {
   label: string;
   onClick?: () => void;
   disabled?: boolean;
+  variant?: "primary" | "success" | "danger";
+  textVariant?: "base" | "bold";
 }
 
 const PrimaryButton = ({
@@ -12,11 +14,21 @@ const PrimaryButton = ({
   disabled = false,
   label,
   onClick,
+  variant = "primary",
+  textVariant,
 }: PrimaryButtonProps) => {
   return (
     <button
       type={type}
-      className={styles.button}
+      className={`${styles.button} ${
+        variant === "success"
+          ? styles.btnSuccess
+          : variant === "danger"
+          ? styles.btnDanger
+          : "btn-primary"
+      }
+			${textVariant === "base" && styles.textBase}
+			`}
       disabled={disabled}
       onClick={onClick}
     >
