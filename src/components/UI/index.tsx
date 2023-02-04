@@ -8,3 +8,4 @@ export { default as PrimaryButton } from "./Button/PrimaryButton";
 export { default as ResumeButton } from "./Button/ResumeButton";
 export { default as SoundBar } from "./SoundBar";
 export { default as TextInput } from "./Form/TextInput";
+export { default as Table } from "./Table";
