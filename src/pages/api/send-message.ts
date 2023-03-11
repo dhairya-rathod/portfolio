@@ -34,7 +34,7 @@ export default async function handler(
     });
 
     const htmlContent = contactUsEmailTemplate(name, email, message);
-    sendMail(htmlContent, "Let's Talk!", email);
+    await sendMail(htmlContent, "Let's Talk!", email);
 
     return res
       .status(200)
