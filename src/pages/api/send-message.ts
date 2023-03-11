@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 import prisma from "@/lib/prisma";
+import { contactUsEmailTemplate, sendMail } from "@/utils/email";
 
 export default async function handler(
   req: NextApiRequest,
@@ -31,6 +32,9 @@ export default async function handler(
         message,
       },
     });
+
+    const htmlContent = contactUsEmailTemplate(name, email, message);
+    sendMail(htmlContent, "Let's Talk!", email);
 
     return res
       .status(200)
