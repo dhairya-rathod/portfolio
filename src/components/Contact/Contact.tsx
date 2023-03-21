@@ -76,13 +76,13 @@ const Contact = () => {
       const data = await response.json();
       if (data.data) {
         successNotification("Message sent successfully");
+        emptyForm();
       } else {
         errorNotification("Error sending your message");
       }
     } catch (err) {
       errorNotification("Error sending your message");
     }
-    emptyForm();
     setIsSending(false);
   };
 

@@ -115,3 +115,10 @@ export const RESUME_LINK = process.env.NEXT_PUBLIC_RESUME_LINK;
 export const GTAG = process.env.NEXT_PUBLIC_GTAG;
 
 export const YT_LINK = "https://youtu.be/dQw4w9WgXcQ?t=43";
+
+export const SMTP_DETAILS = {
+  emailFrom: process.env.NEXT_PUBLIC_EMAIL_AUTHOR,
+  emailTo: process.env.NEXT_PUBLIC_EMAIL_AUTHOR,
+  author: process.env.NEXT_PUBLIC_EMAIL_AUTHOR,
+  password: process.env.NEXT_PUBLIC_SMTP_PASSWORD,
+};
