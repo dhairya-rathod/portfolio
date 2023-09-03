@@ -47,6 +47,8 @@ const Meta = ({ children }: { children: React.ReactNode }) => {
           content="https://res.cloudinary.com/ddn7ibfyc/image/upload/v1669129363/portfolio/portfolio-preview_gvpsjk.png"
         />
 
+        <link rel="icon" href="/favicons/favicon.ico" />
+        <link rel="shortcut icon" href="/favicons/favicon.ico" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
