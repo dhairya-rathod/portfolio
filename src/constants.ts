@@ -61,26 +61,26 @@ export const SOCIAL_LINKS = [
 
 export const SKILLS = {
   languagesAndTools: [
-    "html",
-    "css",
     "javascript",
     "typescript",
+    "nodejs",
+    "java",
+    "golang",
+    "html",
+    "css",
     "sass",
-    "python",
-    "firebase",
-    "stripe",
   ],
   librariesAndFrameworks: [
     "react",
-    "redux",
     "nextjs",
+    "redux",
     "tailwindcss",
     "styledcomponents",
     "mui",
     "chakra-ui",
   ],
-  databases: ["mysql", "mongodb"],
-  other: ["nodejs", "git"],
+  databases: ["mysql", "mongodb", "firebase"],
+  other: ["git"],
 };
 
 export const PROJECTS = [
