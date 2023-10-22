@@ -79,7 +79,7 @@ export const SKILLS = {
     "mui",
     "chakra-ui",
   ],
-  databases: ["mysql", "mongodb", "firebase"],
+  databases: ["mysql", "mongodb"],
   other: ["git"],
 };
 
