@@ -183,3 +183,9 @@ img {
     transform: scaleY(1);
   }
 }
+
+@layer components {
+  .image-zoom-in {
+    @apply hover:scale-125 transition-all duration-500 cursor-pointer;
+  }
+}

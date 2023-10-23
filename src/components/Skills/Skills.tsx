@@ -24,14 +24,16 @@ const Skills = () => {
             <h3 className="uppercase tracking-widest text-gray-light-2 font-medium text-base mb-4 ">
               LANGUAGES AND TOOLS
             </h3>
-            <div className="flex flex-wrap items-center gap-6 transform-gpu ">
+            <div className="flex flex-wrap items-center gap-6 transform-gpu">
               {SKILLS.languagesAndTools.map((skill) => (
                 <Image
+                  className="image-zoom-in"
                   key={skill}
                   src={`/images/skills/${skill}.svg`}
                   alt={skill}
                   width={50}
                   height={50}
+                  title={skill}
                 />
               ))}
             </div>
@@ -43,11 +45,13 @@ const Skills = () => {
             <div className="flex flex-wrap items-center gap-6 transform-gpu ">
               {SKILLS.librariesAndFrameworks.map((skill) => (
                 <Image
+                  className="image-zoom-in"
                   key={skill}
                   src={`/images/skills/${skill}.svg`}
                   alt={skill}
                   width={50}
                   height={50}
+                  title={skill}
                 />
               ))}
             </div>
@@ -60,11 +64,13 @@ const Skills = () => {
               <div className="flex flex-wrap items-center gap-6 transform-gpu ">
                 {SKILLS.databases.map((skill) => (
                   <Image
+                    className="image-zoom-in"
                     key={skill}
                     src={`/images/skills/${skill}.svg`}
                     alt={skill}
                     width={50}
                     height={50}
+                    title={skill}
                   />
                 ))}
               </div>
@@ -76,11 +82,13 @@ const Skills = () => {
               <div className="flex flex-wrap items-center gap-6 transform-gpu ">
                 {SKILLS.other.map((skill) => (
                   <Image
+                    className="image-zoom-in"
                     key={skill}
                     src={`/images/skills/${skill}.svg`}
                     alt={skill}
                     width={50}
                     height={50}
+                    title={skill}
                   />
                 ))}
               </div>
