@@ -29,6 +29,7 @@ export const MENULINKS = [
 export const TYPED_STRINGS = [
   "A Full Stack Developer",
   "I build things for the web",
+  "I'm currently learning TypeScript & Golang",
 ];
 
 export const SOCIAL_LINKS = [
