@@ -11,7 +11,8 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts|tsx)\"",
-    "format": "npm run prettier -- --write"
+    "format": "npm run prettier -- --write",
+    "prisma-push":"prisma db push"
   },
   "dependencies": {
     "@apollo/client": "^3.7.1",

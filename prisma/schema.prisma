@@ -28,9 +28,31 @@ model User {
   active     Boolean  @default(true)
   deleted    Boolean  @default(false)
   created_at DateTime @default(now())
+  Blog       Blog[]
 }
 
 enum Role {
   USER
   ADMIN
+}
+
+model Blog {
+  id         String      @id @default(auto()) @map("_id") @db.ObjectId
+  title      String
+  content    String      @default("")
+  tags       String      @default("")
+  user       User        @relation(fields: [created_by], references: [id])
+  created_by String      @db.ObjectId
+  active     Boolean     @default(true)
+  created_at DateTime    @default(now())
+  updated_at DateTime
+  BlogImage  BlogImage[]
+}
+
+model BlogImage {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  blog       Blog     @relation(fields: [blog_id], references: [id])
+  blog_id    String   @db.ObjectId
+  url        String   @default("")
+  created_at DateTime @default(now())
 }
