@@ -39,6 +39,7 @@ enum Role {
 model Blog {
   id         String      @id @default(auto()) @map("_id") @db.ObjectId
   title      String
+  slug       String
   content    String      @default("")
   tags       String      @default("")
   user       User        @relation(fields: [created_by], references: [id])

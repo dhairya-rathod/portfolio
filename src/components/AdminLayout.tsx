@@ -1,7 +1,21 @@
-import React from "react";
+import { ReactElement } from "react";
 
-const AdminLayout = () => {
-  return <div>AdminLayout</div>;
+import { AdminMeta } from "@/components/Seo";
+import { Footer, Header, Sidebar } from "@/components/UI/Admin";
+
+const AdminLayout = ({ children }: { children: ReactElement }) => {
+  return (
+    <AdminMeta>
+      <main className="flex flex-col h-full min-h-screen">
+        <Header />
+        <div className="flex h-full flex-1 my-16">
+          <Sidebar />
+          <div className="px-8 py-4">{children}</div>
+        </div>
+        <Footer />
+      </main>
+    </AdminMeta>
+  );
 };
 
 export default AdminLayout;

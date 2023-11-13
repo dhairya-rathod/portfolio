@@ -122,3 +122,22 @@ export const SMTP_DETAILS = {
   author: process.env.NEXT_PUBLIC_EMAIL_AUTHOR,
   password: process.env.NEXT_PUBLIC_SMTP_PASSWORD,
 };
+
+export const SIDEBAR_ITEMS = [
+  {
+    name: "Dashboard",
+    url: "/admin/dashboard",
+  },
+  {
+    name: "Messages",
+    url: "/admin/message",
+  },
+  {
+    name: "Blogs",
+    url: "/admin/blog",
+  },
+  {
+    name: "User",
+    url: "/admin/user",
+  },
+];

@@ -3,7 +3,7 @@ import { extendType, objectType } from "nexus";
 export const Message = objectType({
   name: "Message",
   definition(t) {
-    t.string("id");
+    t.id("id");
     t.string("name");
     t.string("email");
     t.string("message");
