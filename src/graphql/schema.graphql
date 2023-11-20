@@ -2,15 +2,50 @@
 ### Do not make changes to this file directly
 
 
+type Blog {
+  active: Boolean
+  content: String
+  created_at: String
+  created_by: User
+  id: ID
+  images: [BlogImages]
+  slug: String
+  tags: String
+  title: String
+  updated_at: String
+}
+
+type BlogEdge {
+  node: Blog
+}
+
+type BlogImages {
+  id: ID
+  url: String
+}
+
+type BlogsWithPagination {
+  edges: [BlogEdge]
+  pageInfo: PageInfo
+}
+
 type Message {
   created_at: String
   email: String
-  id: String
+  id: ID
   message: String
   name: String
 }
 
+type PageInfo {
+  endCursor: String
+  hasNextPage: Boolean
+}
+
 type Query {
+  blogById(id: String!): Blog
+  blogs: [Blog]!
+  blogsWithPagination(cursor: String, skip: Int, take: Int): [BlogsWithPagination]!
   messages: [Message]!
   users: [User]!
 }
@@ -26,7 +61,7 @@ type User {
   deleted: Boolean
   email: String
   first_name: String
-  id: String
+  id: ID
   last_name: String
   role: Role
 }
