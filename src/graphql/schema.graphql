@@ -15,18 +15,28 @@ type Blog {
   updated_at: String
 }
 
-type BlogEdge {
-  node: Blog
-}
-
 type BlogImages {
   id: ID
   url: String
 }
 
-type BlogsWithPagination {
-  edges: [BlogEdge]
-  pageInfo: PageInfo
+type BlogsPageInfoInfinite {
+  endCursor: String
+  hasNextPage: Boolean
+}
+
+type BlogsPageInfoNumber {
+  totalRecords: Int
+}
+
+type BlogsWithInfinitePagination {
+  pageInfo: BlogsPageInfoInfinite
+  records: [Blog]
+}
+
+type BlogsWithNumberPagination {
+  pageInfo: BlogsPageInfoNumber
+  records: [Blog]
 }
 
 type Message {
@@ -37,15 +47,11 @@ type Message {
   name: String
 }
 
-type PageInfo {
-  endCursor: String
-  hasNextPage: Boolean
-}
-
 type Query {
   blogById(id: String!): Blog
   blogs: [Blog]!
-  blogsWithPagination(cursor: String, skip: Int, take: Int): [BlogsWithPagination]!
+  blogsWithInfinitePagination(cursor: String, take: Int!): BlogsWithInfinitePagination!
+  blogsWithNumberPaginationQuery(page: Int!, take: Int!): BlogsWithNumberPagination!
   messages: [Message]!
   users: [User]!
 }
