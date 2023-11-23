@@ -11,15 +11,17 @@ export const AllBlogsQuery = gql`
       active
       created_at
       updated_at
-      created_by
-      images
+      created_by {
+        id
+      }
+      # images
     }
   }
 `;
 
-export const BlogsWithInfinitePagination = gql`
+export const BlogsWithInfinitePaginationQuery = gql`
   query GetBlogsWithInfinitePagination($cursor: String, $take: Int!) {
-    blogsWithInfinitePagination(cursor: $cursor, take: $take) {
+    blogsWithInfinitePaginationQuery(cursor: $cursor, take: $take) {
       pageInfo {
         endCursor
         hasNextPage
@@ -33,16 +35,16 @@ export const BlogsWithInfinitePagination = gql`
         active
         created_at
         updated_at
-        created_by
-        images
+        # created_by
+        # images
       }
     }
   }
 `;
 
-export const BlogsWithNumberPagination = gql`
+export const BlogsWithNumberPaginationQuery = gql`
   query GetBlogsWithNumberPagination($page: Int!, $take: Int!) {
-    blogsWithNumberPagination(page: $page, take: $take) {
+    blogsWithNumberPaginationQuery(page: $page, take: $take) {
       pageInfo {
         totalRecords
       }
@@ -55,8 +57,8 @@ export const BlogsWithNumberPagination = gql`
         active
         created_at
         updated_at
-        created_by
-        images
+        # created_by
+        # images
       }
     }
   }
@@ -73,8 +75,8 @@ export const BlogByIdQuery = gql`
       active
       created_at
       updated_at
-      created_by
-      images
+      # created_by
+      # images
     }
   }
 `;

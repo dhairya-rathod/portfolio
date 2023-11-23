@@ -19,6 +19,12 @@
       ],
       "@/graphql/*": [
         "src/graphql/*"
+      ],
+      "@/services/*": [
+        "src/services/*"
+      ],
+      "@/hooks/*": [
+        "src/hooks/*"
       ]
     },
     "target": "es5",

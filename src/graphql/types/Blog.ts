@@ -93,7 +93,7 @@ export const BlogQuery = extendType({
 export const BlogsWithInfinitePaginationQuery = extendType({
   type: "Query",
   definition(t) {
-    t.nonNull.field("blogsWithInfinitePagination", {
+    t.nonNull.field("blogsWithInfinitePaginationQuery", {
       type: BlogsWithInfinitePagination,
       args: { cursor: stringArg(), take: nonNull(intArg()) },
       async resolve(

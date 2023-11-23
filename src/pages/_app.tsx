@@ -1,4 +1,4 @@
-import { ApolloProvider } from "@apollo/client";
+import { QueryClientProvider } from "@tanstack/react-query";
 import type { NextPage } from "next";
 import { SessionProvider } from "next-auth/react";
 import type { AppProps } from "next/app";
@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { GoogleAnalytics } from "@/components/Scripts";
-import apolloClient from "@/lib/apollo";
+import { queryClient } from "@/services/graphqlRequestClient";
 
 import "react-toastify/dist/ReactToastify.css";
 import "@/styles/globals.scss";
@@ -32,9 +32,9 @@ export default function App({
       <GoogleAnalytics />
       <ErrorBoundary>
         <SessionProvider session={session}>
-          <ApolloProvider client={apolloClient}>
+          <QueryClientProvider client={queryClient}>
             <Component {...pageProps} />
-          </ApolloProvider>
+          </QueryClientProvider>
         </SessionProvider>
       </ErrorBoundary>
       <ToastContainer

@@ -50,7 +50,7 @@ type Message {
 type Query {
   blogById(id: String!): Blog
   blogs: [Blog]!
-  blogsWithInfinitePagination(cursor: String, take: Int!): BlogsWithInfinitePagination!
+  blogsWithInfinitePaginationQuery(cursor: String, take: Int!): BlogsWithInfinitePagination!
   blogsWithNumberPaginationQuery(page: Int!, take: Int!): BlogsWithNumberPagination!
   messages: [Message]!
   users: [User]!

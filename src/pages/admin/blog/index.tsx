@@ -3,17 +3,17 @@ import type { ReactElement } from "react";
 
 import AdminLayout from "@/components/AdminLayout";
 import { Table } from "@/components/UI/Table";
+import { useBlog, BlogRecord } from "@/hooks/useBlog";
 import type { NextPageWithLayout } from "@/pages/_app";
 
-interface BlogRecord {
-  title: string;
-  slug: string;
-  status: string | boolean;
-  createdAt: string;
-  updatedAt: string;
+interface UseBlog {
+  data: any;
+  isLoading: boolean;
 }
 
 const Blog: NextPageWithLayout = () => {
+  const { data, isLoading }: UseBlog = useBlog();
+
   const columnHelper = createColumnHelper<BlogRecord>();
   const columns = [
     columnHelper.accessor((row) => row.title, {
@@ -45,15 +45,7 @@ const Blog: NextPageWithLayout = () => {
     <section>
       <Table<BlogRecord>
         columns={columns}
-        data={[
-          {
-            title: "Example 1",
-            slug: "example-1",
-            status: "Active",
-            createdAt: "19 Nov 2023",
-            updatedAt: "19 Nov 2023",
-          },
-        ]}
+        data={!isLoading ? data?.blogs || [] : []}
       />
     </section>
   );
