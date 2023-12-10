@@ -1,7 +1,9 @@
 import { createColumnHelper } from "@tanstack/react-table";
+import { useRouter } from "next/router";
 import type { ReactElement } from "react";
 
 import AdminLayout from "@/components/AdminLayout";
+import { PrimaryButton } from "@/components/UI";
 import { Table } from "@/components/UI/Table";
 import { useBlog, BlogRecord } from "@/hooks/useBlog";
 import type { NextPageWithLayout } from "@/pages/_app";
@@ -12,6 +14,7 @@ interface UseBlog {
 }
 
 const Blog: NextPageWithLayout = () => {
+  const { asPath, push: pushRoute } = useRouter();
   const { data, isLoading }: UseBlog = useBlog();
 
   const columnHelper = createColumnHelper<BlogRecord>();
@@ -43,6 +46,12 @@ const Blog: NextPageWithLayout = () => {
 
   return (
     <section>
+      <div className="flex mb-4 justify-end w-full">
+        <PrimaryButton
+          label="Add +"
+          onClick={() => pushRoute(`${asPath}/add`)}
+        />
+      </div>
       <Table<BlogRecord>
         columns={columns}
         data={!isLoading ? data?.blogs || [] : []}

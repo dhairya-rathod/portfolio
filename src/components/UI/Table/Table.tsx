@@ -14,6 +14,28 @@ interface TableProps<T> {
   onPageChange?: (page: number) => void;
 }
 
+interface PaginationButtonProps {
+  onClick: () => void;
+  label: string;
+  disabled?: boolean;
+}
+
+const PaginationButton = ({
+  onClick,
+  label,
+  disabled,
+}: PaginationButtonProps) => {
+  return (
+    <button
+      className="border rounded p-1 px-4 disabled:cursor-not-allowed font-bold"
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {label}
+    </button>
+  );
+};
+
 export const Table = <T,>({
   columns,
   data,
@@ -88,21 +110,19 @@ export const Table = <T,>({
           </tbody>
         </table>
       </div>
-      <div className="flex items-center gap-2 mt-4">
-        <button
-          className="border rounded p-1"
-          onClick={() => table.previousPage()}
-          disabled={!table.getCanPreviousPage()}
-        >
-          {"<"}
-        </button>
-        <button
-          className="border rounded p-1"
-          onClick={() => table.nextPage()}
-          disabled={!table.getCanNextPage()}
-        >
-          {">"}
-        </button>
+      <div className="flex items-center mt-4 justify-between">
+        <div className="flex gap-4">
+          <PaginationButton
+            label="<"
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+          />
+          <PaginationButton
+            label=">"
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}
+          />
+        </div>
         <span className="flex items-center gap-1">
           <div>Page</div>
           <strong>
