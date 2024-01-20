@@ -67,7 +67,6 @@ const Meta = ({ children }: { children: React.ReactNode }) => {
           href="/favicons/favicon-16x16.png"
         />
         <meta name="msapplication-TileColor" content="#7000FF" />
-        <link rel="manifest" href="/favicons/site.webmanifest" />
       </Head>
       {children}
     </>
