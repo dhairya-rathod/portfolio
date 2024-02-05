@@ -66,6 +66,7 @@ const Meta = ({ children }: { children: React.ReactNode }) => {
           sizes="16x16"
           href="/favicons/favicon-16x16.png"
         />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#7000FF" />
         <meta name="msapplication-TileColor" content="#7000FF" />
       </Head>
       {children}
